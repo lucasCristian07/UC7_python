@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desafio 04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .resultado {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desafio 04</h1>
+        <form method="POST">
+            <label for="num1">Número 1:</label>
+            <input type="number" id="num1" name="num1"><br><br>
+            <label for="num2">Número 2:</label>
+            <input type="number" id="num2" name="num2"><br><br>
+            <input type="submit" value="Calcular Soma">
+        </form>
+        {% if soma %}
+            <p class="resultado">A soma dos números no intervalo de {{ num1 }} a {{ num2 }} é: {{ soma }}</p>
+        {% elif mensagem %}
+            <p class="resultado">{{ mensagem }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

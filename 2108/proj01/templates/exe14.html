@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desafio 14</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .resultado {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desafio 14</h1>
+        <form method="POST">
+            <label for="num">Número:</label>
+            <input type="number" id="num" name="num"><br><br>
+            <label for="inicial">Começar por:</label>
+            <input type="number" id="inicial" name="inicial"><br><br>
+            <label for="final">Terminar em:</label>
+            <input type="number" id="final" name="final"><br><br>
+            <input type="submit" value="Montar tabuada">
+        </form>
+        {% if num %}
+            <p class="resultado">Tabuada do número {{ num }} de {{ inicial }} a {{ final }}:</p>
+            <ul>
+                {% for linha in tabuada %}
+                    <li>{{ linha }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

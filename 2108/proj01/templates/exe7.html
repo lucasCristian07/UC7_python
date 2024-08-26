@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Desafio 07</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .resultado {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Desafio 07</h1>
+        <form method="POST">
+            <label for="frase">Frase:</label>
+            <input type="text" id="frase" name="frase"><br><br>
+            <input type="submit" value="Contar Palavras">
+        </form>
+        {% if quantidade_palavras %}
+        <p class="resultado">A frase tem {{ quantidade_palavras }} palavra(s).</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

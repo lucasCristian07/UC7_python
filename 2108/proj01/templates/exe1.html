@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exe1</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Exe1</h1>
+    <form method="post">
+        <label for="nota">Nota:</label>
+        <input type="text" id="nota" name="nota">
+        <input type="submit" value="Enviar">
+        {% if mensagem %}
+            <p style="color: red;">{{ mensagem }}</p>
+        {% endif %}
+    </form>
+</body>
+</html>

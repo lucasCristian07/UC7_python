@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desafio 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .resultado {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desafio 10</h1>
+        <form method="POST">
+            <label for="numeros">Números (separados por vírgula):</label>
+            <input type="text" id="numeros" name="numeros"><br><br>
+            <input type="submit" value="Calcular">
+        </form>
+        {% if menor_valor %}
+            <p class="resultado">Menor valor: {{ menor_valor }}</p>
+            <p class="resultado">Maior valor: {{ maior_valor }}</p>
+            <p class="resultado">Soma dos valores: {{ soma_valores }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
