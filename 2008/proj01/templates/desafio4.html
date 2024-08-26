@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafio 04</title>
+  </head>
+  <body>
+    <h1>Desafio 04</h1>
+    <form action="desafio4_submit" method="post">
+      <label for="letra">Insira uma letra:</label>
+      <input type="text" id="letra" name="letra" required>
+      <button type="submit">Verificar</button>
+    </form>
+    {% if resultado %}
+      <p>{{ resultado }}</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafio 02</title>
+  </head>
+  <body>
+    <h1>Desafio 02</h1>
+    <form action="desafio2_submit" method="post">
+      <label for="valor">Insira um valor:</label>
+      <input type="number" id="valor" name="valor" required>
+      <button type="submit">Verificar</button>
+    </form>
+    {% if resultado %}
+      <p>{{ resultado }}</p>
+    {% endif %}
+  </body>
+</html>

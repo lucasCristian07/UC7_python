@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafio 8</title>
+  </head>
+  <body>
+    <h1>Desafio 8</h1>
+    <form action="" method="post">
+      <label for="nome1">Nome do produto 1:</label>
+      <input type="text" id="nome1" name="nome1"><br><br>
+      <label for="preco1">Preço do produto 1:</label>
+      <input type="number" id="preco1" name="preco1"><br><br>
+      <label for="nome2">Nome do produto 2:</label>
+      <input type="text" id="nome2" name="nome2"><br><br>
+      <label for="preco2">Preço do produto 2:</label>
+      <input type="number" id="preco2" name="preco2"><br><br>
+      <label for="nome3">Nome do produto 3:</label>
+      <input type="text" id="nome3" name="nome3"><br><br>
+      <label for="preco3">Preço do produto 3:</label>
+      <input type="number" id="preco3" name="preco3"><br><br>
+      <input type="submit" value="Enviar">
+    </form>
+    {% if mais_barato %}
+      <p>O produto mais barato é o {{ mais_barato }}.</p>
+    {% endif %}
+  </body>
+</html>
